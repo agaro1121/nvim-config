@@ -30,7 +30,8 @@ local cmd = vim.cmd
 ----------------------------------
 -- global
 vim.opt_global.completeopt = { "menuone", "noinsert", "noselect" }
-vim.opt_global.shortmess:remove("F"):append("c")
+vim.opt_global.shortmess:remove("F")
+vim.opt_global.shortmess:append("c")
 -- LSP Setup ---------------------
 ----------------------------------
 local metals_config = require("metals").bare_config()
@@ -48,8 +49,7 @@ metals_config.settings = {
 -- metals_config.init_options.statusBarProvider = "on"
 
 -- Example if you are using cmp how to make sure the correct capabilities for snippets are set
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-metals_config.capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Debug settings if you're using nvim-dap
 local dap = require("dap")

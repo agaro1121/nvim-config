@@ -37,5 +37,4 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-capslock'
   Plug 'mrjones2014/smart-splits.nvim'
-  -- Plug('toppair/peek.nvim', {['do'] = 'deno task --quiet build:fast' })
 vim.call('plug#end')
