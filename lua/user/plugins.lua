@@ -24,6 +24,10 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   Plug 'simrat39/symbols-outline.nvim'
 	Plug 'neoclide/jsonc.vim'
 	Plug('tpope/vim-abolish')
+	Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-capslock'
+  Plug 'mrjones2014/smart-splits.nvim'
   -- themes
   Plug('dracula/vim', { as = 'dracula' })
   Plug('rakr/vim-one')
@@ -33,8 +37,4 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 	Plug 'marko-cerovac/material.nvim'
 	Plug 'Mofiqul/vscode.nvim'
 	Plug 'Th3Whit3Wolf/one-nvim'
-	Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-capslock'
-  Plug 'mrjones2014/smart-splits.nvim'
 vim.call('plug#end')
