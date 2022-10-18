@@ -33,4 +33,9 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 	Plug 'marko-cerovac/material.nvim'
 	Plug 'Mofiqul/vscode.nvim'
 	Plug 'Th3Whit3Wolf/one-nvim'
+	Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-capslock'
+  Plug 'mrjones2014/smart-splits.nvim'
+  -- Plug('toppair/peek.nvim', {['do'] = 'deno task --quiet build:fast' })
 vim.call('plug#end')

@@ -5,6 +5,8 @@ function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- vim config
+map("n","<leader>E", ":source $HOME/.config/nvim/init.lua<cr>")
 -- telescope
 map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 map("n", "<leader>lg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
@@ -26,10 +28,14 @@ map("n", "<leader>e", ":NvimTreeToggle<cr>")
 map("n", "<leader>s", ":NvimTreeFindFile<cr>")
 
 -- break the habit
-map("n", "<Up>", "<NOP>")
-map("n", "<Down>", "<NOP>")
-map("n", "<Left>", "<NOP>")
+map("n", "<Up>",    "<NOP>")
+map("n", "<Down>",  "<NOP>")
+map("n", "<Left>",  "<NOP>")
 map("n", "<Right>", "<NOP>")
+map("i", "<Up>",    "<NOP>")
+map("i", "<Down>",  "<NOP>")
+map("i", "<Left>",  "<NOP>")
+map("i", "<Right>", "<NOP>")
 
 -- telescope.lazy
 map("n", "<leader>ll", ":LazyGit<cr>")
@@ -39,17 +45,15 @@ map("v", "<leader>d", [["+yy<cr>]])
 map("v", "<leader>p", [["+p<cr>]])
 
 -- LSP
-map("n", "gD", "<cmd>lua vim.lsp.buf.definition()<CR>")
+map("n", "gD", "<cmd>lua vim.lsp.buf.definition()<cr>")
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 --map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
 map("n", "gi", [[<cmd>lua require"telescope.builtin".lsp_implementations()<CR>]])
 --map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 map("n", "gr", [[<cmd>lua require"telescope.builtin".lsp_references()<CR>]])
-map("n", "gd", "<cmd>lua vim.lsp.buf.document_symbol()<CR>")
---map("n", "gds", [[<cmd>lua require"user.telescope".lsp_document_symbols()<CR>]])
+-- map("n", "gds", "<cmd>lua vim.lsp.buf.document_symbol()<CR>")
 map("n", "gds", [[<cmd>lua require"telescope.builtin".lsp_document_symbols()<CR>]])
 --map("n", "gws", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>")
---map("n", "gws", [[<cmd>lua require"user.telescope".lsp_workspace_symbols()<CR>]])
 map("n", "gws", [[<cmd>lua require"telescope.builtin".lsp_dynamic_workspace_symbols()<CR>]])
 map("n", "<leader>cl", [[<cmd>lua vim.lsp.codelens.run()<CR>]])
 map("n", "<leader>sh", [[<cmd>lua vim.lsp.buf.signature_help()<CR>]])

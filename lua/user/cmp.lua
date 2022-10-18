@@ -7,8 +7,8 @@ cmp.setup({
     { name = "nvim_lsp_signature_help" },
     { name = "vsnip" },
     { name = "rg" },
-	{ name = 'buffer' },
-	{ name = 'path' },
+  	{ name = 'buffer' },
+  	{ name = 'path' },
   },
   snippet = {
     expand = function(args)
