@@ -11,6 +11,7 @@ map("n","<leader>E", ":source $HOME/.config/nvim/init.lua<cr>")
 map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 map("n", "<leader>lg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 map("n", "<leader>bs", "<cmd>lua require('telescope.builtin').buffers()<cr>")
+map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 
 -- window navigation
 map("n", "<C-j>", "<C-w>j")
@@ -61,13 +62,17 @@ map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
 map("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>")
 map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 map("n", "<leader>ws", '<cmd>lua require"metals".hover_worksheet()<CR>')
-map("n", "<leader>aa", [[<cmd>lua vim.diagnostic.setqflist()<CR>]]) -- all workspace diagnostics
-map("n", "<leader>ae", [[<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>]]) -- all workspace errors
-map("n", "<leader>aw", [[<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>]]) -- all workspace warnings
+-- map("n", "<leader>aa", [[<cmd>lua vim.diagnostic.setqflist()<CR>]]) -- all workspace diagnostics
+map("n", "<leader>aa", [[<cmd>lua require"telescope.builtin".diagnostics()<CR>]]) -- all workspace diagnostics
+-- map("n", "<leader>ae", [[<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>]]) -- all workspace errors
+map("n", "<leader>ae", [[<cmd>lua require"telescope.builtin".diagnostics({severity = "E"})<CR>]]) -- all workspace errors
+-- map("n", "<leader>aw", [[<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>]]) -- all workspace warnings
+map("n", "<leader>aw", [[<cmd>lua require"telescope.builtin".diagnostics({severity = "W"})<CR>]]) -- all workspace errors
 map("n", "<leader>d", "<cmd>lua vim.diagnostic.setloclist()<CR>") -- buffer diagnostics only
 map("n", "[c", "<cmd>lua vim.diagnostic.goto_prev { wrap = false }<CR>")
 map("n", "]c", "<cmd>lua vim.diagnostic.goto_next { wrap = false }<CR>")
 map("n", "<leader>o", ":SymbolsOutline<CR>")
+map("n", "<leader>mc", [[<cmd>lua require"telescope".extensions.metals.commands()<CR>]])
 
 -- Example mappings for usage with nvim-dap. If you don't use that, you can
 -- skip these
