@@ -17,7 +17,7 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   Plug('hrsh7th/cmp-vsnip')
   Plug('hrsh7th/vim-vsnip')
   Plug('mfussenegger/nvim-dap')
-  Plug('neoclide/coc.nvim', {branch = 'release'})
+  Plug('neoclide/coc.nvim', { branch = 'release' })
   Plug 'lukas-reineke/indent-blankline.nvim'
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'lukas-reineke/cmp-rg'
@@ -37,4 +37,5 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 	Plug 'marko-cerovac/material.nvim'
 	Plug 'Mofiqul/vscode.nvim'
 	Plug 'Th3Whit3Wolf/one-nvim'
+  Plug 'drewtempelmeyer/palenight.vim'
 vim.call('plug#end')
