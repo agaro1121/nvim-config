@@ -83,3 +83,10 @@ map("n", "<leader>dt", [[<cmd>lua require"dap".toggle_breakpoint()<CR>]])
 map("n", "<leader>dso", [[<cmd>lua require"dap".step_over()<CR>]])
 map("n", "<leader>dsi", [[<cmd>lua require"dap".step_into()<CR>]])
 map("n", "<leader>dl", [[<cmd>lua require"dap".run_last()<CR>]])
+
+-- peek.nvim
+map("n", "<leader>md", [[<cmd> PeekToggle<CR>]])
+
+-- terminal
+map("t", "<ESC>", [[<C-\><C-n><CR>]])
+map("n", "<leader>t", ":18sp|:term<CR>")

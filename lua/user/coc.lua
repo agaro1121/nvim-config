@@ -1,8 +1,6 @@
 vim.g.coc_global_extensions = {
 	'coc-json',
 	'coc-cfn-lint',
-	'coc-markdownlint',
-	'coc-markdown-preview-enhanced',
 	'coc-webview',
 	'coc-tsserver',
 	'coc-swagger',
@@ -10,3 +8,5 @@ vim.g.coc_global_extensions = {
 	'coc-pyright'
 }
 
+-- 'coc-markdownlint',
+-- 'coc-markdown-preview-enhanced',

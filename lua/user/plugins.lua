@@ -26,8 +26,11 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 	Plug('tpope/vim-abolish')
 	Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-capslock'
+  -- Plug 'tpope/vim-capslock'
   Plug 'mrjones2014/smart-splits.nvim'
+  Plug('toppair/peek.nvim', {['do'] = 'deno task --quiet build:fast' })
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
   -- themes
   Plug('dracula/vim', { as = 'dracula' })
   Plug('rakr/vim-one')
