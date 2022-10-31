@@ -25,12 +25,14 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 	Plug 'neoclide/jsonc.vim'
 	Plug('tpope/vim-abolish')
 	Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-surround'
+  -- Plug 'tpope/vim-surround'
+  Plug 'kylechui/nvim-surround'
   -- Plug 'tpope/vim-capslock'
   Plug 'mrjones2014/smart-splits.nvim'
   Plug('toppair/peek.nvim', {['do'] = 'deno task --quiet build:fast' })
   Plug 'williamboman/mason.nvim'
   Plug 'williamboman/mason-lspconfig.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   -- themes
   Plug('dracula/vim', { as = 'dracula' })
   Plug('rakr/vim-one')
